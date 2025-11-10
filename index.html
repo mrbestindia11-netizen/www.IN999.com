@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>In999 Official Community Portal</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap');
+        body {
+            font-family: 'Montserrat', Arial, sans-serif;
+            margin: 0;
+            background-color: #0c0d1c; /* Very Dark Blue/Navy from new creative */
+            color: #f8f9fa; /* Light text */
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        .header {
+            background-color: #1a1c35; 
+            padding: 15px 0;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .header img {
+            max-height: 55px;
+        }
+        .hero {
+            background: linear-gradient(135deg, #1a1c35, #353860); /* Deep Blue/Purple Gradient */
+            color: white;
+            padding: 80px 20px 60px 20px;
+            text-align: center;
+            border-bottom: 5px solid #ffd700; /* Gold Separator */
+        }
+        .hero h1 {
+            font-size: 3.5em;
+            margin-bottom: 15px;
+            font-weight: 900;
+            color: #ffd700; /* Bright Gold Heading */
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+        }
+        .hero p {
+            font-size: 1.4em;
+            max-width: 800px;
+            margin: 0 auto 50px auto;
+            color: #cccccc;
+        }
+        .cta-button {
+            display: inline-block;
+            padding: 22px 50px;
+            font-size: 1.6em;
+            font-weight: 700;
+            color: white;
+            background-color: #e81d1d; /* Red Button from New Creative */
+            border: none;
+            border-radius: 12px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+        }
+        .cta-button:hover {
+            background-color: #c41818;
+            transform: translateY(-3px);
+        }
+        .section {
+            padding: 80px 20px;
+            max-width: 1100px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .section h2 {
+            font-size: 2.8em;
+            color: #ffaa00; /* Orange-Gold heading */
+            margin-bottom: 30px;
+            font-weight: 700;
+        }
+        .image-showcase {
+            margin-top: 60px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+            border: 5px solid #e81d1d; /* Red Border */
+        }
+        .image-showcase img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .footer {
+            background-color: #1a1c35;
+            color: #cccccc;
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 60px;
+            font-size: 0.9em;
+        }
+
+        /* Mobile Optimization */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5em; }
+            .cta-button { padding: 18px 35px; font-size: 1.3em; }
+            .section h2 { font-size: 2em; }
+        }
+    </style>
+    <script>
+        window.onload = function() {
+            var telegramLink = "https://t.me/+cLsOpTtjsSM0MzVl"; // Aapka Telegram link
+            var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+            
+            // Automatic redirect only for mobile for better user experience
+            if (isMobile) {
+                window.location.href = telegramLink;
+            } else {
+                // Desktop users get a better view before redirecting
+                setTimeout(function() {
+                    window.location.href = telegramLink;
+                }, 5000); 
+            }
+
+            // Ensure buttons and image click also redirect
+            document.querySelectorAll('.cta-button, .image-showcase a').forEach(function(el) {
+                el.onclick = function(e) {
+                    e.preventDefault(); 
+                    window.location.href = telegramLink;
+                };
+            });
+        }
+    </script>
+</head>
+<body>
+    
+<div class="header">
+        <img src="in999_logo.png" alt="IN999 Logo">
+</div>
+
+    
+<div class="hero">
+        <h1>Welcome to the Official In999 Community Portal</h1>
+        <p>Get instant access to verified updates, exclusive content, and connect with our fast-growing network.</p>
+        <a href="https://t.me/+cLsOpTtjsSM0MzVl" class="cta-button">JOIN TELEGRAM CHANNEL NOW</a>
+    </div>
+
+    
+<div class="section">
+        <h2>Your Direct Access is Ready</h2>
+        <p>Click on the image below to instantly join the verified channel. Don't miss out on the latest announcements!</p>
+        <div class="image-showcase">
+            <a href="https://t.me/+cLsOpTtjsSM0MzVl" target="_blank">
+                <img src="telegram_creative.png" alt="IN999 Telegram Channel Preview">
+            </a>
+        </div>
+    </div>
+    
+<div class="section" style="padding-top: 40px;">
+    <a href="https://t.me/+cLsOpTtjsSM0MzVl" class="cta-button" style="margin-top: 0;">ENTER OFFICIAL PORTAL</a>
+</div>
+
+    
+<div class="footer">
+        <p>&copy; 2024 In999 Official Portal. All rights reserved.</p>
+        <p>This is a community-driven communication portal. We ensure timely and verified updates.</p>
+    </div>
+</body>
+</html>
